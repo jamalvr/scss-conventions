@@ -12,6 +12,8 @@ Here you'll find the most important guidelines.
 2. [🏡 Local variables](_local-variables.md)
 3. [🤝 Using other files](_local-variables.md)
 4. [🥳 Class names](_class-names.md)
+5. [✏️ Nesting & inheritance](_nesting.md)
+6. [🗣 Comments](_comments.md)
 
 ## 🤓 Learnings from V1
 The problem with [V1](#) is that we relied too much on the right interpretation of the programmer using the conventions. We are all humans and with a 'loose' language like CSS, with an almost equally loose coding style, inconsistencies will happen. No matter how good the programmer is.

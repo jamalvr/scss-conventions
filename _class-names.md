@@ -5,7 +5,19 @@ We 'cherry picked' some rules from  BEMM and OOCSS to come up with something new
 
 We define a parent `component` name. This should be relatively short. If the component name is made of two words, we use a single line (`-`) to connect the name, like so: `component-name`.
 
-## Modifiers
+- [🥳 Class names](#%f0%9f%a5%b3-class-names)
+  - [👯‍♂️ Modifiers](#%f0%9f%91%af%e2%80%8d%e2%99%82%ef%b8%8f-modifiers)
+  - [🎉 States](#%f0%9f%8e%89-states)
+    - [🎁 Examples](#%f0%9f%8e%81-examples)
+    - [🎊 Usage](#%f0%9f%8e%8a-usage)
+  - [💕 Helper classes](#%f0%9f%92%95-helper-classes)
+    - [💞 HTML elements](#%f0%9f%92%9e-html-elements)
+    - [😍 Examples](#%f0%9f%98%8d-examples)
+    - [😘 Usage](#%f0%9f%98%98-usage)
+    - [💗 Helper modifiers](#%f0%9f%92%97-helper-modifiers)
+      - [Example](#example)
+
+## 👯‍♂️ Modifiers
 In case a component has multiple versions of itself, target them with a modifier. We define a modifier by using double lines (`--`) between the component name and modifier, like so: `component-name--modifier`.
 
 ```html
@@ -15,6 +27,7 @@ In case a component has multiple versions of itself, target them with a modifier
 <!---- ✅Do ---->
 <a href="#" class="button--primary"></a>
 ```
+By using `@extend` we can use the base of the button without the need of adding an extra `.button` class.
 ```scss
 .button {
     // Base styling
@@ -28,18 +41,18 @@ In case a component has multiple versions of itself, target them with a modifier
         color: const($color, white);
     }
 }
-
 ```
 
-## States
+## 🎉 States
 States are added as a sepperate class next to the component class name.
-### Examples
+
+### 🎁 Examples
 ```scss
 .active { ... }
 .disabled { ... }
 .error { ... }
 ```
-### Usage
+### 🎊 Usage
 ```html
 <div class="component active"></div>
 ```
@@ -52,12 +65,10 @@ States are added as a sepperate class next to the component class name.
 }
 ```
 
-## Helper classes
+## 💕 Helper classes
 Helper classes are for elements that barely have any semantic value of themselves, or are used in different ways. To improve readability and simplify applying styles to an element.
 
-Voornamelijk voor elementen die geen of weinig semantische waarde vanuit hunzelf hebben. Dit komt voornamelijk omdat ze op meerdere manieren gebruikt kunnen worden en op andere manieren stijling nodig hebben. Door de helper classes zie je altijd waarvoor het element gebruikt wordt en wat het is. Zowel in de HTML als in de CSS/SCSS.
-
-### HTML elements
+### 💞 HTML elements
 ```html
 <span> 
 <div>
@@ -66,10 +77,10 @@ Voornamelijk voor elementen die geen of weinig semantische waarde vanuit hunzelf
 <img>
 ```
 
-### Examples
+### 😍 Examples
 There are only rare cases where you need to apply basic styling to helper classes. In some cases, like an `.icon`, it can be quite useful because it needs the same base styling everywhere.
 
-Most helper classes are used inside a component.
+Most helper classes are used inside a component and don't need base styling of themselves. 
 
 ```scss
 .icon {
@@ -89,7 +100,7 @@ Most helper classes are used inside a component.
 .price { ... }
 ```
 
-### Usage
+### 😘 Usage
 ```html
 <!---- 🚫Don't ---->
 <a href="#" class="button button--primary">
@@ -102,4 +113,16 @@ Most helper classes are used inside a component.
     <span class="text">Klik hier</span>
     <svg class="icon"></svg>
 </a>
+```
+
+### 💗 Helper modifiers
+Even helper classes sometimes need a little bit of help. You can see them as mini-components. So it's only natural that they should have the ability be modified.
+
+#### Example
+```scss
+.price {
+    &--month { ... }
+    &--year { ... }
+    &--text { ... }
+}
 ```
