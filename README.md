@@ -16,9 +16,10 @@ Here you'll find the most important guidelines.
 4. [🥳 Class names](_class-names.md)
 5. [✏️ Nesting & inheritance](_nesting.md)
 6. [🗣 Comments](_comments.md)
+7. [💗 Media queries](_comments.md)
 
 ## 🤓 Learnings from V1
-The problem with [V1](#) is that we relied too much on the right interpretation of the programmer using the conventions. We are all humans and with a 'loose' language like CSS, with an almost equally loose coding style, inconsistencies will happen. No matter how good the programmer is.
+The problem with [V1](_v1.md) is that we relied too much on the right interpretation of the programmer using the conventions. We are all humans and with a 'loose' language like CSS, with an almost equally loose coding style, inconsistencies will happen. No matter how good the programmer is.
 
 ## 📕 Sources
 - [SASS-lang: variables](https://sass-lang.com/documentation/variables)
