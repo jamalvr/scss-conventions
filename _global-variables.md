@@ -49,22 +49,19 @@ For using the map we need the `const` function. This way we declare the variable
 ### 🧭 Map function
 Define this function in your global functions or `@use` it in every file where you need to target maps.
 ```scss
-// Reading nested maps
-@function map-get-nested($map, $arguments...) {
-  @each $arg in $arguments {
-    @if not map-has-key($map, $arg) {
-      @error 'Unknown constant modifier or state: `#{$arg}`.';
-    } @else {
-      $map: map-get($map, $arg);
-    }
-  }
-
-  @return $map;
-}
-
 // Using nested maps. It takes 'base' as default state
 @function const($map, $modifier, $state: base) {
   @return map-get-nested($map, $modifier, $state);
+}
+
+// Reading both nested and single level maps
+@function const($map, $modifier, $state: base) {
+  // Check if the first level is a map
+  @if type-of(map-get($map, $modifier)) == "map" {
+    @return map-get-nested($map, $modifier, $state);
+  } 
+  // If not, use regular map get on first level
+  @return map-get($map, $modifier);
 }
 ```
 

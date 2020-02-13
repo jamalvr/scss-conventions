@@ -8,9 +8,11 @@ Comments should be kept simple and should be used as often as possible.
 //// Four (4) = H2
 // Two (2) = single line or comment
 // todo: feature request, open tasks etc.
-/* 
-Uitgebreidere uitleg 
-*/
+
+// Can also be a 
+// longer explanation
+
+// Just place a shitload of comments to explain what you're doing 💩
 ```
 
 ## Example

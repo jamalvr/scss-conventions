@@ -12,21 +12,26 @@ There will be instances we're you want to edit or use variables locally. You don
 ## 👨‍👩‍👧‍👦 Usage
 The variables are scoped inside their respective file because we use [`@use` instead of `@import`](_using-other-files.scss). This gives us the flexibility to use easy and short names that can be used in different files at the same time — wow.
 
+For that same reason we don't place local variables inside their component class.
+
 ### 👷‍♂️ Example
 Use local variables for edits that are done only inside a component. Use global maps for styling that needs to be consistent across multiple components; like the brand color palette and typography.
 
 ```scss
 //////// _button.scss
+
+// 🚫Don't
+.button {
+    $padding: 16px !default;
+
+    padding: $padding; // Much local, such wow
+}
+
+// ✅Do
 $padding: 16px !default;
 
 .button {
     padding: $padding; // Much local, such wow
-    background-color: const($color, primary);
-    color: const($color, white);
-
-    &:hover {
-        background-color: const($color, primary, active);
-    }
 }
 ```
 
