@@ -6,6 +6,7 @@ We 'cherry picked' some rules from  BEMM and OOCSS to come up with something new
 We define a parent `component` name. This should be relatively short. If the component name is made of two words, we use a single line (`-`) to connect the name, like so: `component-name`.
 
 - [🥳 Class names](#%f0%9f%a5%b3-class-names)
+  - [💃 Basic rules](#%f0%9f%92%83-basic-rules)
   - [👯‍♂️ Modifiers](#%f0%9f%91%af%e2%80%8d%e2%99%82%ef%b8%8f-modifiers)
   - [🎉 States](#%f0%9f%8e%89-states)
     - [🎁 Examples](#%f0%9f%8e%81-examples)
@@ -17,8 +18,30 @@ We define a parent `component` name. This should be relatively short. If the com
     - [💗 Helper modifiers](#%f0%9f%92%97-helper-modifiers)
       - [Example](#example)
 
+## 💃 Basic rules
+Don't attach classes to elements when it's not needed.
+```scss
+//// 🚫Don't
+h1.title { ... }
+
+h1 {
+    font-size: const($font-size, h1);
+    .title {
+        font-size: const($font-size, title);
+    }
+}
+
+//// ✅Do
+// 💪Preferred: Sepperate them if they have different needs.
+// If you're code is clean, adding a '.title' class to your 'h1' will overwrite original styling
+h1 { ... }
+.title { ... }
+```
+
 ## 👯‍♂️ Modifiers
 In case a component has multiple versions of itself, target them with a modifier. We define a modifier by using double lines (`--`) between the component name and modifier, like so: `component-name--modifier`.
+
+The main reason you "specify" the class is because it forces scoping an element and reinforcing inheritance if there is any. The elements need to be self contained as much as possible, without breaking the bigger picture.
 
 ```html
 <!---- 🚫Don't ---->

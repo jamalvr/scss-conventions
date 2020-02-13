@@ -21,3 +21,9 @@ Here you'll find the most important guidelines.
 The problem with [V1](#) is that we relied too much on the right interpretation of the programmer using the conventions. We are all humans and with a 'loose' language like CSS, with an almost equally loose coding style, inconsistencies will happen. No matter how good the programmer is.
 
 ## 📕 Sources
+- [SASS-lang: variables](https://sass-lang.com/documentation/variables)
+- [CSS-tricks: introducing SASS modules](https://css-tricks.com/introducing-sass-modules/)
+- [getbemm: introduction](http://getbem.com/introduction/)
+- [Smahing Magazine: Object Oriented CSS](https://www.smashingmagazine.com/2011/12/an-introduction-to-object-oriented-css-oocss/)
+- Nope: [Smashing Magazine: Atomic Approach](https://www.smashingmagazine.com/2013/10/challenging-css-best-practices-atomic-approach/)
+- [CSS-tricks: Approach to Media Queries in SASS](https://css-tricks.com/approaches-media-queries-sass/)
