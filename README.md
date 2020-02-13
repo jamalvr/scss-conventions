@@ -9,7 +9,7 @@ Clean, readable and scalable CSS. By combining vanilla CSS inheritance with SCSS
 5. Don't style ID's ➡️ Create a seperate class with the same name if you have to.
 6. Only use mixins if you pass through arguments that change ALL code in the mixin.
 7. `@use` files and don't `@import` files.
-8. `@extend` repetitive code. Keep it dry.
+8. `@extend` repetitive lumps of static code. Keep it dry.
 
 ## 🧠 Contents
 Here you'll find the most important guidelines.
@@ -19,7 +19,7 @@ Here you'll find the most important guidelines.
 4. [🥳 Class names](_class-names.md)
 5. [✏️ Nesting & inheritance](_nesting.md)
 6. [🗣 Comments](_comments.md)
-7. [💗 Media queries](_comments.md)
+7. [💗 Media queries](_media-queries.md)
 8. [☝️ `@extend` & `%placeholder`](_extend.md)
 9. [💩 Mixins `@include`](_mixins.md)
 10. [💪 Functions](_functions.md)
