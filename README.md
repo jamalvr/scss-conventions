@@ -20,7 +20,7 @@ Here you'll find the most important guidelines.
 5. [✏️ Nesting & inheritance](_nesting.md)
 6. [🗣 Comments](_comments.md)
 7. [💗 Media queries](_comments.md)
-8. [☝️ `@Extend`](_extend.md)
+8. [☝️ `@extend` & `%placeholder`](_extend.md)
 9. [💩 Mixins `@include`](_mixins.md)
 
 ## 🤓 Learnings from V1

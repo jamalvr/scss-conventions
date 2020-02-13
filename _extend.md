@@ -1,6 +1,6 @@
 [⬅️ Back to main](README.md)
 
-# ☝️ Extend & placeholders
+# ☝️ Extends & placeholders
 Use `%placeholders` for repetitive lumps of code that don't need a class of their own.
 
 - Use `%placeholder` and `@extend` in the same file where their called. This makes it easier to find the base code.
