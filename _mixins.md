@@ -8,6 +8,7 @@ Mixins are lumps of code that can use arguments like a `@function`. This way we 
 ## 🚽 Example
 ### 🚫Don't
 The problem with mixins is that it renders all lines of code that are included. It's very easy to misuse, because of it's syntactic sugar. But it's output will make your code bloated.
+
 ```scss
 //// Input
 @mixin button($color) {
