@@ -41,5 +41,7 @@ But there are many use cases where you're in need of the other two. Especially w
 @include media(max, desktop) { ... }
 ```
 
+---
+
 ### 🚧 Todo's
 - [ ] Write working function for the above to work 
